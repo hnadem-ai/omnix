@@ -6,8 +6,8 @@ export interface Scan {
   targetUrl: string;
   status: ScanStatus;
   createdAt: string;
-  endpoints: any[];   // we will improve this later
-  findings: any[];    // we will improve this later
+  endpoints: any[];
+  findings: any[];
 }
 
 export interface CreateScanBody {

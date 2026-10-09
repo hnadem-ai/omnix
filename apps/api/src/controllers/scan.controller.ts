@@ -4,7 +4,7 @@ import { Request, Response } from "express";
 import { CreateScanBody } from "../types/scan.types.js";
 import { createScan } from "../services/scan.service.js";
 
-export const createScanController = (
+export const createScanController = async (
     req: Request<{}, {}, CreateScanBody>,
     res: Response
 ) => {
@@ -17,7 +17,7 @@ export const createScanController = (
         });
     }
 
-    const scan = createScan(req.body);
+    const scan = await createScan(req.body);
 
     return res.status(201).json({
         success: true,
