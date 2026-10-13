@@ -1,0 +1,38 @@
+.custom-input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--text-h);
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+  max-width: 400px;
+}
+
+/* Placeholder styling */
+.custom-input::placeholder {
+  color: var(--text);
+}
+
+/* Hover state */
+.custom-input:hover {
+  border-color: #9ca3af;
+}
+
+/* Focus state with a modern accent ring */
+.custom-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-bg);
+}
+
+/* Disabled state */
+.custom-input:disabled {
+  background-color: #f3f4f6;
+  border-color: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
